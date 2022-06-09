@@ -1,0 +1,16 @@
+<view class='container'>
+  <view class='header'>
+    <epsoide-cmp class="epsoide" index="{{classic.index}}" />
+    <view class="like-container">
+      <like-cmp bind:like="onLike" class="like" like="{{classic.like_status}}" count="{{classic.fav_nums}}" />
+    </view>
+  </view>
+  <view hidden="{{classic.type!==100}}">
+    <movie-cmp img="{{classic.image}}" content="{{classic.content}}" />
+  </view>
+  <music-cmp wx:if="{{classic.type==200}}" img="{{classic.image}}" content="{{classic.content}}" src="{{classic.url}}" title="{{classic.title}}" />
+  <view hidden="{{classic.type!==300}}">
+    <essay-cmp img="{{classic.image}}" content="{{classic.content}}" />
+  </view>
+  <navi-cmp class="navi" latest="{{latest}}" first="{{first}}" catch:left="onPreviousNext" catch:right="onPreviousNext" title="{{classic.title}}" />
+</view>

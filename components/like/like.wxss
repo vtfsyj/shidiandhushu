@@ -1,0 +1,24 @@
+/* components/like/like.wxss */
+.container {
+    display: inline-flex;
+    /*会使子元素取消快状 自己不会*/
+    flex-direction: row;
+    /* 必须指定宽度，否则会出现移动 */
+    width: 90rpx;
+    padding: 10rpx;
+    /* background-color: blue; */
+}
+
+.container image {
+    width: 32rpx;
+    height: 28rpx;
+}
+
+.container text {
+    font-size: 24rpx;
+    color: #bbbbbb;
+    line-height: 24rpx;
+    position: relative;
+    bottom: 10rpx;
+    left: 6rpx;
+}
